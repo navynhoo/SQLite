@@ -32,12 +32,12 @@ public class LoginActivity extends AppCompatActivity {
         btnLoginEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, senha;
+                String cpf, senha;
 
-                email = txtLoginEmail.getText().toString();
+                cpf = txtLoginEmail.getText().toString();
                 senha = txtLoginSenha.getText().toString();
 
-                Boolean checarEmailSenha = db.checarEmailSenha(email,senha);
+                Boolean checarEmailSenha = db.checarEmailSenha(cpf,senha);
 
                 if (checarEmailSenha==true){
                     Log.i("btnLoginEntar","Cliquei no botão entrar do login");
